@@ -6,7 +6,7 @@ package ex14;
 //académico (con decimales).
 
 import java.util.Scanner;
-
+	
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class Main {
         double average = (first + second + third) / 3.0;
 
         System.out.println("Report card average: " + (int) average);
-        System.out.println("Academic record average: " + average);
+        System.out.println("Academic record average: " + Math.round(average*100) / 100.0);
 
         scanner.close();
     }
