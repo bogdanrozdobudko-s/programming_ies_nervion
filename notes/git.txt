@@ -1,0 +1,21 @@
+# instalar Git en Windows
+winget install --id 'Git.Git'
+# clonar tu repositorio
+git clone https://github.com/<tu_nombre>/<tu_repositorio>
+# entrar en el repositorio
+cd <tu_repositorio>
+# editar credenciales
+git config --global user.name '<tu_nombre>'
+git config --global user.email '<tu_correo_electronico>'
+# hacer o crear un archivo 
+notepad.exe README.md
+# añadir cambios del repositorio local (todos)
+git add -A 
+# hacer un commit 
+git commit -m "<cualquier_nombre_de_commit>"
+# subir los cambios en el repositorio remoto
+git push -u
+
+# si el repositorio remoto ha sido cambiado, pero local no
+cd <tu_repositorio>
+git pull
