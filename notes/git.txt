@@ -4,7 +4,7 @@ winget install --id 'Git.Git'
 git clone https://github.com/<tu_nombre>/<tu_repositorio>
 # entrar en el repositorio
 cd <tu_repositorio>
-# editar credenciales
+# editar la información sobre ti
 git config --global user.name '<tu_nombre>'
 git config --global user.email '<tu_correo_electronico>'
 # hacer o crear un archivo 
@@ -19,3 +19,8 @@ git push -u
 # si el repositorio remoto ha sido cambiado, pero local no
 cd <tu_repositorio>
 git pull
+
+NOTA: cuando haces `git push', git simpre te pide tu token para 
+subir los archivos en el repositorio remoto. Pero existen algunos
+`managers' para guardar una vez tu token y subir archivos sin ne-
+cesidad de escribir el token cada vez.
