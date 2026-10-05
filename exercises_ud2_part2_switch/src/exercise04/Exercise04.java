@@ -10,6 +10,40 @@ package exercise04;
 // en formato numérico.
 
 
-public class Exercise04 {
+import java.util.Scanner;
 
+public class Exercise04 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Primera tirada: ");
+        String primera = input.nextLine().toUpperCase();
+
+        System.out.print("Segunda tirada: ");
+        String segunda = input.nextLine().toUpperCase();
+
+        int valorPrimera = switch (primera) {
+            case "UNO" -> 1;
+            case "DOS" -> 2;
+            case "TRES" -> 3;
+            case "CUATRO" -> 4;
+            case "CINCO" -> 5;
+            case "SEIS" -> 6;
+            default -> 0;
+        };
+
+        int valorSegunda = switch (segunda) {
+            case "UNO" -> 1;
+            case "DOS" -> 2;
+            case "TRES" -> 3;
+            case "CUATRO" -> 4;
+            case "CINCO" -> 5;
+            case "SEIS" -> 6;
+            default -> 0;
+        };
+
+        System.out.println(valorPrimera + valorSegunda);
+
+        input.close();
+    }
 }
