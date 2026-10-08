@@ -17,41 +17,44 @@ public class Exercise07 {
 
     String player1, player2;
 
-    while (true) {
+    // Validación para jugador 1 (sin while)
+    System.out.print("Option of the first player: ");
+    player1 = input.nextLine();
+    if (!player1.equals("rock") && !player1.equals("paper") && !player1.equals("scissors")) {
+      System.err.println("Invalid item!");
       System.out.print("Option of the first player: ");
       player1 = input.nextLine();
-
-      switch (player1) {
-        case "rock":
-        case "paper":
-        case "scissors":
-          break;
-        default:
+      if (!player1.equals("rock") && !player1.equals("paper") && !player1.equals("scissors")) {
+        System.err.println("Invalid item!");
+        System.out.print("Option of the first player: ");
+        player1 = input.nextLine();
+        if (!player1.equals("rock") && !player1.equals("paper") && !player1.equals("scissors")) {
           System.err.println("Invalid item!");
-          continue;
+          System.out.print("Option of the first player: ");
+          player1 = input.nextLine();
+        }
       }
-
-      break;
     }
 
-    // works only in a console supporting ANSI
     clearScreen();
 
-    while (true) {
+    // Validación para jugador 2 (sin while)
+    System.out.print("Option of the second player: ");
+    player2 = input.nextLine();
+    if (!player2.equals("rock") && !player2.equals("paper") && !player2.equals("scissors")) {
+      System.err.println("Invalid item!");
       System.out.print("Option of the second player: ");
       player2 = input.nextLine();
-
-      switch (player2) {
-        case "rock":
-        case "paper":
-        case "scissors":
-          break;
-        default:
+      if (!player2.equals("rock") && !player2.equals("paper") && !player2.equals("scissors")) {
+        System.err.println("Invalid item!");
+        System.out.print("Option of the second player: ");
+        player2 = input.nextLine();
+        if (!player2.equals("rock") && !player2.equals("paper") && !player2.equals("scissors")) {
           System.err.println("Invalid item!");
-          continue;
+          System.out.print("Option of the second player: ");
+          player2 = input.nextLine();
+        }
       }
-
-      break;
     }
 
     if (player1.equals(player2)) {
@@ -69,4 +72,3 @@ public class Exercise07 {
     input.close();
   }
 }
-
